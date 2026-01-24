@@ -1,0 +1,30 @@
+using UnityEngine;
+
+public class PlayerShootingv1 : MonoBehaviour
+{
+    // Start is called once before the first execution of Update after the MonoBehaviour is createdpublic GameObject bulletPrefabs;
+    public GameObject bulletPrefabs;
+    public float shootingInterval;
+    private float lastBulletTime;
+    void Update()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            if (Time.time - lastBulletTime >
+            shootingInterval)
+            {
+                ShootBullet();
+                lastBulletTime = Time.time;
+            }
+        }
+    }
+    private void ShootBullet()
+    {
+        Instantiate(bulletPrefabs, transform.position, transform.rotation);
+    }
+
+    void OnApplicationQuit()
+    {
+        Debug.Log("Game is exiting. Cleaning up resources.");
+    }
+}

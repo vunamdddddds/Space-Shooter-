@@ -25,7 +25,7 @@ public class PlayerShooting : MonoBehaviour {
 
     [Tooltip("current weapon power")]
     [Range(1, 4)]       //change it if you wish
-    public int weaponPower = 1; 
+    public int weaponPower = 1;  
 
     public Guns guns;
     bool shootingIsActive = true; 

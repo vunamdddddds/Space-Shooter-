@@ -9,6 +9,11 @@ private SpriteRenderer spriteRenderer;
 void Start()
 {
 spriteRenderer = GetComponent<SpriteRenderer>();
+
+        if (spriteRenderer == null)
+        {
+            Debug.LogError("EngineFx chưa có SpriteRenderer!");
+        }
 }
 
 // Update is called once per frame
