@@ -5,26 +5,34 @@ public class PlayerShootingv1 : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is createdpublic GameObject bulletPrefabs;
     public GameObject bulletPrefabs;
     public float shootingInterval;
+
+    public Vector3 bulletOffset;
+
     private float lastBulletTime;
+
     void Update()
     {
         if (Input.GetMouseButton(0))
         {
-            if (Time.time - lastBulletTime >
-            shootingInterval)
-            {
-                ShootBullet();
-                lastBulletTime = Time.time;
-            }
+
+            UpdateFiring();
         }
     }
-    private void ShootBullet()
+
+    private void UpdateFiring()
     {
-        Instantiate(bulletPrefabs, transform.position, transform.rotation);
+        if (Time.time - lastBulletTime > shootingInterval)
+        {
+            ShootBullet();
+            lastBulletTime = Time.time;
+
+        }
     }
 
-    void OnApplicationQuit()
+    private void ShootBullet()
     {
-        Debug.Log("Game is exiting. Cleaning up resources.");
+        Instantiate(bulletPrefabs, transform.position + bulletOffset, transform.rotation);
     }
+
+
 }
