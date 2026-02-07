@@ -3,4 +3,4 @@
 <h1>ảnh github repo part 3</h1>
 <img src="./image/ảnh game part 3.png" alt="mo-ta-anh">
 <h1>ảnh github repo part 4</h1>
-<img src="">
+<img src="./image/ảnh game part 4.png" alt="mo-ta-anh">
