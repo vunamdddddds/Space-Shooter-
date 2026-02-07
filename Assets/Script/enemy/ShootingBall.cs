@@ -13,7 +13,7 @@ public class ShootingBall : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class ShootingBall : MonoBehaviour
     }
 
 
-void UpdateFiring()
+    void UpdateFiring()
     {
         if (Time.time - lastBulletTime > shootingInterval)
         {

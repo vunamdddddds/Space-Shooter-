@@ -1,35 +1,37 @@
+using System.Diagnostics;
 using UnityEngine;
 
-public class BulletBall : MonoBehaviour
+public class bulletEnemyMov : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float plySpeed;
+    public float lifeTime;
+    private float curTimer = 0f;
 
-    public float flySpeed ;
-
-    public float lifeTime ;
-    private float lifeTimer = 0f;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
         var newPosition = transform.position;
-        newPosition.y -= Time.deltaTime * flySpeed;
+        newPosition.y -= Time.deltaTime * plySpeed;
         transform.position = newPosition;
-        KillBullet();
+        LifeTime();
+
     }
 
-    void KillBullet()
+    void LifeTime()
     {
-        lifeTimer += Time.deltaTime;
-        if (lifeTimer >= lifeTime)
+
+        if (curTimer >= lifeTime)
         {
             Destroy(gameObject);
-            lifeTimer = 0f;
+            curTimer = 0f;
         }
-
+        curTimer += Time.deltaTime;
     }
+
 }

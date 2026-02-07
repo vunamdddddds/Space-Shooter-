@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 313631193616528377}
   - component: {fileID: 612415225062438214}
-  - component: {fileID: 8928612082277851698}
   - component: {fileID: 5341983653681531161}
   - component: {fileID: 2337245946845544787}
-  m_Layer: 6
+  - component: {fileID: 7847193287048703872}
+  m_Layer: 7
   m_Name: Ball_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,20 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8928612082277851698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2850856214160069802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4af8b10c4b508294cbb9f636c5e5db44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flySpeed: 2
-  lifeTime: 4
 --- !u!61 &5341983653681531161
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -177,3 +163,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7847193287048703872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2850856214160069802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af8b10c4b508294cbb9f636c5e5db44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flySpeed: 5
+  lifeTime: 2
+  damage: 1
