@@ -9,7 +9,6 @@ public class Blinking : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-
     }
 
     void Update()

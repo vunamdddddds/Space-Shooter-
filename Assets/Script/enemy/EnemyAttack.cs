@@ -11,8 +11,8 @@ class EnemyAttack : MonoBehaviour
 
         if (playerHeart != null)
         {
-            playerHeart.TakeDamage(damage);
-            enemyHealth.TakeDamage(1000);
+            playerHeart.TakeDamage(damage,"player");
+            enemyHealth.TakeDamage(1000,"enemy");
 
         }
     }

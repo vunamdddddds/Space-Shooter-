@@ -12,15 +12,14 @@ public class Health : MonoBehaviour
         healthPoint = defaultHealthPoint;
     }
 
-    public void OnTriggerEnter2D(Collider2D collision) => Die();
 
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage,string name)
     {
         if (healthPoint <= 0) return;
 
         healthPoint -= damage;
-        Debug.Log("Health: " + healthPoint);
+        Debug.Log("Health "+name +":"+ healthPoint);
 
         if (healthPoint <= 0) {            
             Die();};

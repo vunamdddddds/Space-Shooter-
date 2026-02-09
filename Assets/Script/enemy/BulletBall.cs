@@ -17,7 +17,7 @@ public class BulletBall : MonoBehaviour
         if (player != null)
         {
             Debug.Log("Player hit");
-            player.TakeDamage(damage);
+            player.TakeDamage(damage,"player");
             Destroy(gameObject);
         }
     }
