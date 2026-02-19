@@ -12,32 +12,28 @@ public class HeartEnemy : MonoBehaviour
     void Start()
     {
         curHealth = health;
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    
-    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (curHealth<=0)
+        if (curHealth <= 0)
         {
             Die();
             Debug.Log("Enemy died");
-        }else
-        {
-            curHealth-=1;
-            Debug.Log("curHealth:"+curHealth);
         }
-       
+        else
+        {
+            curHealth -= 1;
+            Debug.Log("curHealth:" + curHealth);
+        }
+
     }
 
     void Die()
     {
-        Destroy(gameObject); 
-   
+        Destroy(gameObject);
+
     }
 }
