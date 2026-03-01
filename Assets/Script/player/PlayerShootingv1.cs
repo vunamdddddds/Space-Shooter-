@@ -19,12 +19,12 @@ public class PlayerShootingv1 : MonoBehaviour
         }
     }
 
-    private void UpdateFiring()
+     private void UpdateFiring()
     {
         if (Time.time - lastBulletTime > shootingInterval)
         {
             ShootBullet();
-            lastBulletTime = Time.time;
+            lastBulletTime =Time.time;
 
         }
     }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class BulletCha : MonoBehaviour
 {
     public float flySpeed;
 
@@ -11,10 +11,9 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        var enemy = collision.GetComponent<EnemyHealth>();
+        var enemy = collision.GetComponent<Health>();
         if (enemy != null)
         {
-            Debug.Log("Enemy hit");
             enemy.TakeDamage(damage,"enemy");
             Destroy(gameObject);
         }
@@ -29,7 +28,7 @@ public class Bullet : MonoBehaviour
     }
 
     // hàm viết bổ sung thêm thời gian sống của viên đạn 
-    void KillBullet()
+   protected void KillBullet()
     {
         curTimer += Time.deltaTime;
         if (curTimer >= lifeTime)

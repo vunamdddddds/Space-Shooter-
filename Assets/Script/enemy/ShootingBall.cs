@@ -11,10 +11,7 @@ public class ShootingBall : MonoBehaviour
 
     public float shootingInterval;
 
-    void Start()
-    {
-
-    }
+  
 
     // Update is called once per frame
     void Update()
