@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
     public int defaultHealthPoint;
     private int healthPoint;
 
+    public System.Action onDead;
     void Start()
     {
         healthPoint = defaultHealthPoint;
@@ -30,6 +31,7 @@ public class Health : MonoBehaviour
         transform.rotation);
         Destroy(explosion, 1);
         Destroy(gameObject);
+        onDead?.Invoke();
     }
 
 
