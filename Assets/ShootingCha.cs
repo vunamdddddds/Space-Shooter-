@@ -1,7 +1,8 @@
 using UnityEngine;
 public class ShootingCha : MonoBehaviour
 {
-     public GameObject ArmoPrefab;
+    
+    public GameObject ballPrefab;
 
     public Vector3 spawnPosition;
 
@@ -9,5 +10,22 @@ public class ShootingCha : MonoBehaviour
 
     public float shootingInterval;
 
+  
+
+
+    protected void UpdateFiring()
+    {
+        if (Time.time - lastBulletTime > shootingInterval)
+        {
+            ShootBall();
+            lastBulletTime = Time.time;
+
+        }
+    }
+
+   protected void ShootBall()
+    {
+        Instantiate(ballPrefab, transform.position + spawnPosition, transform.rotation);
+    }
     
 }

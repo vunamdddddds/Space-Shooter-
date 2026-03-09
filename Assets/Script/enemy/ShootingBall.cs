@@ -1,15 +1,9 @@
 using UnityEngine;
 
-public class ShootingBall : MonoBehaviour
+public class ShootingBall : ShootingCha
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public GameObject ballPrefab;
-
-    public Vector3 spawnPosition;
-
-    private float lastBulletTime;
-
-    public float shootingInterval;
+   
 
   
 
@@ -20,18 +14,5 @@ public class ShootingBall : MonoBehaviour
     }
 
 
-    void UpdateFiring()
-    {
-        if (Time.time - lastBulletTime > shootingInterval)
-        {
-            ShootBall();
-            lastBulletTime = Time.time;
-
-        }
-    }
-
-    void ShootBall()
-    {
-        Instantiate(ballPrefab, transform.position + spawnPosition, transform.rotation);
-    }
+   
 }

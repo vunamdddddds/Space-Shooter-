@@ -12,9 +12,10 @@ public class BulletCha : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         var enemy = collision.GetComponent<Health>();
+        string name = collision.gameObject.name;
         if (enemy != null)
         {
-            enemy.TakeDamage(damage,"enemy");
+            enemy.TakeDamage(damage, name);
             Destroy(gameObject);
         }
     }

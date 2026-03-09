@@ -2,7 +2,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Vector3 SpawnPosition;
     // Update is called once per frame
+    void Start()
+    {
+        transform.position = SpawnPosition;
+    }
     void Update()
     {
         var worldPoint =

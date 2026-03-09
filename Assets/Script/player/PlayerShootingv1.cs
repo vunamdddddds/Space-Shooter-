@@ -1,14 +1,9 @@
 using UnityEngine;
 
-public class PlayerShootingv1 : MonoBehaviour
+public class PlayerShootingv1 : ShootingCha
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is createdpublic GameObject bulletPrefabs;
-    public GameObject bulletPrefabs;
-    public float shootingInterval;
 
-    public Vector3 bulletOffset;
-
-    private float lastBulletTime;
 
     void Update()
     {
@@ -19,20 +14,7 @@ public class PlayerShootingv1 : MonoBehaviour
         }
     }
 
-     private void UpdateFiring()
-    {
-        if (Time.time - lastBulletTime > shootingInterval)
-        {
-            ShootBullet();
-            lastBulletTime =Time.time;
-
-        }
-    }
-
-    private void ShootBullet()
-    {
-        Instantiate(bulletPrefabs, transform.position + bulletOffset, transform.rotation);
-    }
+   
 
 
 }
