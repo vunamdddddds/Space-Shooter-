@@ -17,6 +17,11 @@ public class BulletCha : MonoBehaviour
         {
             enemy.TakeDamage(damage, name);
             Destroy(gameObject);
+        }else
+        {
+            Debug.Log("Va chạm giữa đạn và đạn" );
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
         }
     }
     // Update is called once per frame
