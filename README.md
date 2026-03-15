@@ -8,3 +8,5 @@
 <img src="./image/ảnh game part 5 .png" alt="mo-ta-anh">
 <h1>ảnh github repo part 6</h1>
 <img src="./image/ảnh game part 6.png" alt="mo-ta-anh">
+<h1>ảnh github repo part 7</h1>
+<img src="./image/ảnh game part 7.png" alt="mo-ta-anh">
